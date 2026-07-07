@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lob0garou.github.io/pageforce-seo-cro-checklist/sitemap.xml

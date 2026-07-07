@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checklist SEO/CRO para Landing Pages | PageForce</title>
+    <meta
+      name="description"
+      content="Checklist gratuito e interativo para auditar SEO, copy, WhatsApp, CRM, rastreamento e conversão de landing pages."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Checklist SEO/CRO para Landing Pages" />
+    <meta
+      property="og:description"
+      content="Audite clareza, SEO, prova, mobile, WhatsApp, CRM e tracking antes de investir mais em tráfego."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lob0garou.github.io/pageforce-seo-cro-checklist/" />
+    <link rel="canonical" href="https://lob0garou.github.io/pageforce-seo-cro-checklist/" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0a0a0f;
+        --panel: #11131a;
+        --panel-2: #161a22;
+        --line: rgba(244, 243, 238, 0.16);
+        --text: #f4f3ee;
+        --muted: rgba(244, 243, 238, 0.68);
+        --amber: #ef9f27;
+        --blue: #378add;
+        --red: #e24b4a;
+        --teal: #1d9e75;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, rgba(55, 138, 221, 0.12), transparent 320px),
+          var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 28px 0 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+      }
+
+      .mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--amber), var(--blue));
+        color: #08090d;
+      }
+
+      .toplink {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 72px 0 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) 360px;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .eyebrow {
+        color: var(--amber);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 16px 0;
+        font-size: clamp(40px, 6vw, 72px);
+        line-height: 0.98;
+        max-width: 860px;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.55;
+        max-width: 760px;
+      }
+
+      .score {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(17, 19, 26, 0.92);
+        padding: 22px;
+        position: sticky;
+        top: 18px;
+      }
+
+      .score strong {
+        display: block;
+        font-size: 44px;
+        line-height: 1;
+      }
+
+      .bar {
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(244, 243, 238, 0.12);
+        overflow: hidden;
+        margin: 18px 0 10px;
+      }
+
+      .fill {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--red), var(--amber), var(--teal));
+        transition: width 180ms ease;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 22px 0 72px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        padding: 22px;
+      }
+
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+
+      .card p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      label {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: 10px;
+        align-items: start;
+        padding: 10px 0;
+        color: rgba(244, 243, 238, 0.86);
+        line-height: 1.42;
+      }
+
+      input {
+        margin-top: 3px;
+        accent-color: var(--amber);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .primary {
+        background: var(--amber);
+        color: #0a0a0f;
+      }
+
+      .secondary {
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .score {
+          position: static;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Checklist SEO/CRO para Landing Pages",
+        "description": "Checklist gratuito para auditar SEO, copy, WhatsApp, CRM, rastreamento e conversão de landing pages.",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PageForce",
+          "url": "https://pageforce.com.br/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <div class="brand"><span class="mark">PF</span> PageForce</div>
+        <a class="toplink" href="https://pageforce.com.br/" rel="noopener">pageforce.com.br</a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">checklist gratuito · SEO + CRO</div>
+          <h1>Audite uma landing page antes de comprar mais tráfego.</h1>
+          <p class="lead">
+            Marque os itens que já estão resolvidos. O objetivo é encontrar vazamentos de clareza,
+            busca, confiança, WhatsApp, CRM e rastreamento antes de refazer a página ou aumentar mídia.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://pageforce.com.br/checklist-auditoria-landing-page/" rel="noopener">
+              Ver versão completa
+            </a>
+            <a class="button secondary" href="https://pageforce.com.br/diagnostico/" rel="noopener">
+              Solicitar diagnóstico
+            </a>
+          </div>
+        </div>
+
+        <aside class="score" aria-live="polite">
+          <span class="eyebrow">score atual</span>
+          <strong id="scoreValue">0%</strong>
+          <div class="bar"><div class="fill" id="scoreFill"></div></div>
+          <p id="scoreLabel">Comece pelos itens de oferta e CTA.</p>
+        </aside>
+      </section>
+
+      <section class="grid" aria-label="Checklist de auditoria">
+        <article class="card">
+          <h2>Oferta</h2>
+          <p>O visitante precisa entender a proposta em segundos.</p>
+          <label><input type="checkbox" /> H1 com serviço, público ou problema principal.</label>
+          <label><input type="checkbox" /> Subtítulo explica resultado e próximo passo.</label>
+          <label><input type="checkbox" /> CTA principal aparece sem rolagem no mobile.</label>
+          <label><input type="checkbox" /> A promessa não depende só de slogan criativo.</label>
+        </article>
+
+        <article class="card">
+          <h2>SEO</h2>
+          <p>A página precisa ser rastreável, indexável e semanticamente clara.</p>
+          <label><input type="checkbox" /> Title, description e H1 estão alinhados.</label>
+          <label><input type="checkbox" /> Canonical aponta para a URL pública correta.</label>
+          <label><input type="checkbox" /> Conteúdo responde dúvidas comerciais reais.</label>
+          <label><input type="checkbox" /> Links internos conectam diagnóstico, serviço e contato.</label>
+        </article>
+
+        <article class="card">
+          <h2>Confiança</h2>
+          <p>Antes de chamar, o cliente procura sinais de risco baixo.</p>
+          <label><input type="checkbox" /> Contato oficial aparece no HTML público.</label>
+          <label><input type="checkbox" /> Processo, prazo ou próximos passos estão claros.</label>
+          <label><input type="checkbox" /> Provas, exemplos ou canais oficiais sustentam a oferta.</label>
+          <label><input type="checkbox" /> FAQs atacam objeções que travam decisão.</label>
+        </article>
+
+        <article class="card">
+          <h2>Mobile e WhatsApp</h2>
+          <p>A conversão local geralmente acontece na tela pequena.</p>
+          <label><input type="checkbox" /> Botões têm toque confortável e texto legível.</label>
+          <label><input type="checkbox" /> Link de WhatsApp usa número oficial.</label>
+          <label><input type="checkbox" /> Mensagem inicial preserva contexto da página.</label>
+          <label><input type="checkbox" /> Não há pop-up ou efeito bloqueando o CTA.</label>
+        </article>
+
+        <article class="card">
+          <h2>Tracking</h2>
+          <p>Sem origem e evento, conversão vira sensação.</p>
+          <label><input type="checkbox" /> Cliques em CTA, WhatsApp e formulário são eventos separados.</label>
+          <label><input type="checkbox" /> UTMs acompanham o lead até atendimento ou CRM.</label>
+          <label><input type="checkbox" /> Existe medição de tempo de resposta.</label>
+          <label><input type="checkbox" /> Follow-up tem dono, status e rotina.</label>
+        </article>
+
+        <article class="card">
+          <h2>Decisão</h2>
+          <p>Nem todo problema exige redesenhar tudo.</p>
+          <label><input type="checkbox" /> Problemas de entendimento e CTA foram priorizados.</label>
+          <label><input type="checkbox" /> Página dedicada só será criada se a intenção mudar.</label>
+          <label><input type="checkbox" /> Redesign só entra quando a base técnica limita resultado.</label>
+          <label><input type="checkbox" /> Próxima ação está ligada a impacto comercial mensurável.</label>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell">
+        Ativo público mantido pela
+        <a href="https://pageforce.com.br/" rel="noopener">PageForce</a>
+        para auditoria de landing pages, SEO local, WhatsApp, CRM e conversão.
+      </div>
+    </footer>
+
+    <script>
+      const inputs = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+      const scoreValue = document.querySelector("#scoreValue");
+      const scoreFill = document.querySelector("#scoreFill");
+      const scoreLabel = document.querySelector("#scoreLabel");
+
+      const labels = [
+        [25, "Base frágil. Corrija clareza, CTA e rastreamento antes de mídia."],
+        [50, "Base parcial. Priorize confiança, mobile e WhatsApp contextual."],
+        [75, "Boa base. Falta fechar tracking, CRM e follow-up."],
+        [101, "Pronta para teste mais sério de tráfego e conversão."],
+      ];
+
+      function updateScore() {
+        const checked = inputs.filter((input) => input.checked).length;
+        const score = Math.round((checked / inputs.length) * 100);
+        scoreValue.textContent = `${score}%`;
+        scoreFill.style.width = `${score}%`;
+        scoreLabel.textContent = labels.find(([limit]) => score < limit)[1];
+      }
+
+      inputs.forEach((input) => input.addEventListener("change", updateScore));
+      updateScore();
+    </script>
+  </body>
+</html>
